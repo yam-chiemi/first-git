@@ -1,0 +1,643 @@
+@import "compass";
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.dancing{
+    font-family: 'Dancing Script', cursive;
+}
+
+
+@mixin fontsize($size: 10) {
+
+font-size: $size + px;
+
+font-size: ($size / 10) * 1rem;
+
+}
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+
+// colors
+    $basecolor: #ffffff;
+    $bordercolor: #e2bfd3;
+    $subcolor: #910665;
+    $keycolor: #ec0da5;
+    $fontcolor: #d22087;
+    
+    
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $basecolor;
+    
+}
+
+div:after,
+ul:after {
+    content: "";
+    display: block;
+    clear: both;
+   }
+   
+@media (min-width: 1161px){
+header{
+   @include display-flex;
+    flex-direction:column;
+    justify-content: space-around;
+     @include box-sizing(border-box);
+    margin: 10px 20px;
+}
+
+ h1{
+    width: 20%;
+    font-size: 4em;
+    letter-spacing: 3px;
+    color: $keycolor;
+    display: inline;
+ }   
+ p{
+    display: inline-block;
+    max-width: 80%;
+    text-align: right;
+    font-size: 1.4em;
+    line-height: 20px;
+    margin: 0;
+    float: right;
+ }
+}  
+#cover{
+   display: block;
+}
+.sp_owl-carousel{
+    display: none;
+}
+.owl-carousel owl-theme{
+    display: block;
+}
+
+.owl-carousel .owl-item img {
+    width: auto;
+    height: 100%;
+    display: block;
+    
+}
+.owl-carousel owl-theme{
+    position: relative;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $keycolor;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 15px;
+    height: 15px;
+    margin: 5px 20px;
+    background: $bordercolor;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+.banner1, .banner2, .banner3, .banner4,{
+    height: 600px;
+
+    h2{
+    letter-spacing: 1px;
+    line-height: 40px;
+    font-size: 3rem;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    z-index: 10;
+    text-align: end;
+    }
+    img{
+        position: absolute;
+    　　height: 100%;
+        width: auto;
+        top:0;
+        left: 0;
+        }
+} 
+ .banner3, .banner4{
+        h2{
+            color: #ffffff;
+        }
+    }
+
+.main_menu{
+     display: flex;
+     flex-direction: row-reverse;
+}
+h3{
+       color: $fontcolor;
+       @extend .dancing;
+        font-size: 60px;
+        border-bottom: $bordercolor;
+        border-style: solid;
+        border-bottom-width: 1px;
+        margin: 10px 0 10px 80px;
+        padding-top: 30px;
+        width: 100%;
+    }
+    h4{
+        color: $fontcolor;
+        font-size: 30px;
+        margin: 0 0 20px 190px;
+    }
+    h5{
+        font-size: 20px;
+        padding: 20px 20px 0;
+        color: floralwhite;
+        line-height: 25px;
+    }
+     #works{
+     h5{
+        padding: 50px 20px 0;  
+     }
+ }
+    h6{
+        color: #fff;
+        font-size: 4rem;
+        text-align: center;
+        display: block;
+        line-height: 0;
+        z-index: 10;
+    }
+a {
+font-weight:bold;
+text-decoration:none;
+}
+a:link { /*アクセスしたことのないリンク*/
+color:#0000FF;
+}
+a:visited { /*アクセスしたことのあるリンク*/
+color:yellow;;
+}
+a:hover, a:active  {/*マウスが上に乗っている状態*/
+color:#FF0099;
+text-decoration:underline;
+}
+
+#about{
+        width: 100%;
+    }
+.sp_about_text{
+    display: none;
+}
+    .about_text, .sp_about_text{
+        width: 45%;
+        height: 480px;
+        background-color: #310303;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 0;
+        margin: 20px 0 0 160px;
+        left: 180px;
+}
+    .about_flame{
+        width: 55%;
+        height: 480px;
+        color: #910665;
+        background-color: #910665;
+        z-index: 9;
+        margin: 0 0 0 300px;
+        }
+
+    .table_flex{
+       @include display-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+    #skills table{
+        margin: 0 0 30px 230px;
+    }
+    .sp_table{
+        display: none;
+    }
+    #skills thead tr th{
+        width: 860px;
+        height: 50px;
+        font-size: 2rem;
+        vertical-align: middle;
+        background-color: $subcolor;
+        color: #ffffff;
+        border-width: 1px;
+        border-color: #7d7d7d;
+        border-style: solid;
+    }
+    #skills tbody{
+        background-color: #f8eef7;
+        color: #000000;
+        tr td{
+           width: 430px;
+            height: 50px;
+            font-size: 2rem;
+            vertical-align: middle;
+            text-align: center;
+            border-width: 1px;
+            border-color: #7d7d7d;
+            border-style: solid;
+        }
+    }
+    .works_container{
+        @include display-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 0 10px 300px;
+    }
+
+    .nyuuryoku, .kousei, .shiryou, .bunseki, .saito, .assistant{
+        max-width: 400px;
+        max-height: 400px;
+        margin: 10px;
+    }
+    .nyuuryoku-img, .kousei-img, .shiryou-img, .bunseki-img, .saito-img, .assistant-img{
+         max-width: 400px;
+         height: 200px;
+        img{
+            width: 100%;
+            max-height: 100%;
+        }
+    } 
+    .nyuuryoku-text, .kousei-text, .shiryou-text, .bunseki-text, .saito-text, .assistant-text{
+        max-width: 400px;
+        height: 200px;
+        background-color: $subcolor;
+    }
+   form{
+        max-width: 700px;
+        height: auto;
+        margin-left: 300px;
+        border-style: double;
+        border-color: $keycolor;
+        background-color: #f8eef7;
+        border-width: 5px;
+        text-align: center;
+   } 
+   .item{
+        display: inline-grid;
+        margin-top: 70px;
+   }
+   input{
+        margin: 10px;
+        width: 400px;
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 1px;
+        border-color: $keycolor;
+    &[name=message] {
+        padding-bottom: 100px;
+    }
+    &[type=submit] {
+    margin: 30px 0 70px 90px;
+    width: 250px;
+    padding: 10px;
+    background: #910665;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 90px;
+     &:hover {
+              background-color: lighten(#910665, 20%);
+     }           
+    }
+   }     
+    
+#menu{
+    display: block;
+    width: 20%;
+    .menu_list li{
+        text-align: right;
+         margin: 30px 50px 30px 0;
+
+     img{
+        width: 100px;
+        height: 100px;
+        &:hover{
+            opacity: 0.5;
+        }
+     }
+        }
+    .menu_list_fixed{
+       position: sticky;
+       margin-bottom: 0;
+       top: 30px;
+       }
+}
+
+#main{
+    width: 80%;
+    display: block;
+}
+
+small{
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 1160px) and(min-width: 961px){
+    header{
+   @include display-flex;
+    flex-direction:column;
+    justify-content: space-around;
+     @include box-sizing(border-box);
+    margin: 10px 20px;
+}
+
+ h1{
+    width: 20%;
+    font-size: 4em;
+    letter-spacing: 3px;
+    color: $keycolor;
+    display: inline;
+ }   
+ p{
+    display: inline-block;
+    max-width: 80%;
+    text-align: right;
+    font-size: 1.4em;
+    line-height: 20px;
+    margin: 0;
+    float: right;
+ }
+    .about_flame{
+       width: 68%;
+       margin: 0 0 0 200px;
+    }
+    .about_text{
+        width: 55%;
+        margin: 20px 0 0 50px;
+        }
+  .pc_table{
+        display: none;
+    }
+   .sp_table{
+        display: block;
+        
+    }
+}
+
+@media (max-width: 960px){
+    header{
+    @include display-flex;
+    flex-direction:column;
+    justify-content: center;
+     @include box-sizing(border-box);
+    margin: 10px 0;
+
+     h1{
+    width: 100%;
+    font-size: 4em;
+    letter-spacing: 3px;
+    color: $keycolor;
+    display: block;
+    text-align: center;
+ }   
+ p{
+    display: block;
+    width: 100%;
+    font-size: 1.4em;
+    line-height: 20px;
+    margin: 0;
+    text-align: center;
+    float: none;
+ }
+}
+.owl-carousel owl-theme{
+    display: none;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+    margin: 5px 30px;
+    background: $bordercolor;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+.banner1, .banner2, .banner3, .banner4,{
+    height: 350px;
+
+    h2{
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    text-align: end;
+    }
+    
+    img{
+        position: absolute;
+    　　height: 0 auto;
+        width: 100%;
+        top:0;
+        left: 0;
+        }
+} 
+ .banner3, .banner4{
+        h2{
+            color: #ffffff;
+        }
+    }
+h3{
+        font-size: 60px;
+        border-bottom: $bordercolor;
+        border-style: solid;
+        border-bottom-width: 1px;
+        margin: 10px 0 10px 0px;
+        padding-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    h4{
+        color: $fontcolor;
+        font-size: 30px;
+        margin: 0 0 20px 0px;
+        text-align: center;
+    }
+    h5{
+        font-size: 18px;
+        padding: 10px 10px 0;
+        color: floralwhite;
+        line-height: 25px;
+        text-align: center;
+        
+    }
+     #works{
+     h5{
+        padding: 50px 20px 0;  
+     }
+ }
+    h6{
+        color: #fff;
+        font-size: 4rem;
+        text-align: center;
+        display: block;
+        line-height: 0;
+        z-index: 10;
+    }
+    .main_menu{
+        display: block;
+        }
+    #menu{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    ul{
+         box-sizing: border-box;
+    }
+    .menu_list li{
+        text-align: right;
+         margin: 20px 30px 0px 0;
+        display:block;
+     img{
+        max-width: 100px;
+        max-height: 100px;
+        &:hover{
+            opacity: 0.5;
+        }
+     }
+        }
+    .menu_list_fixed{
+       display: flex;
+       justify-content: space-between;
+       height: 130px;
+       background-color: #ffffff;
+       width: 100%;
+       }
+}
+    .about_flame{
+       width: 90%;
+       margin: 0 20px;
+       max-height: 100%;
+    }
+    .about_text{
+        width: 90%;
+        max-height: 100%;
+        margin: 10px 0 0 30px;
+        left: 10px;
+        }
+.table_flex{
+       @include display-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+#skills table{
+        margin: 10px 0px;
+    }
+.tu-ru_table, .sp_table{
+    margin: 0 10px;
+    width: 100%;
+}
+  .pc_table{
+        display: none;
+    }
+   .sp_table{
+        display: inline-table;
+        width: 100%;
+    }
+#skills thead tr th, .sp_table thead tr th{
+        width: 100%;
+        height: 50px;
+        font-size: 2rem;
+        vertical-align: middle;
+        background-color: $subcolor;
+        color: #ffffff;
+        border-width: 1px;
+        border-color: #7d7d7d;
+        border-style: solid;
+    }
+    #skills tbody, .sp_table thead tr th{
+        background-color: #f8eef7;
+        color: #000000;
+        tr td{
+           width: 100%;
+            height: 50px;
+            font-size: 2rem;
+            vertical-align: middle;
+            text-align: center;
+            border-width: 1px;
+            border-color: #7d7d7d;
+            border-style: solid;
+        }
+    }
+
+ .works_container{
+        margin: 0px;
+    }
+form{
+        margin: 0;
+        max-width: 920px;
+} 
+.item{
+        display: inline-grid;
+        margin-top: 20px;
+   }
+   input{
+        margin: 10px;
+        max-width: 270px;
+        padding: 20px 10px;
+        border-radius: 10px;
+        border-width: 1px;
+        border-color: $keycolor;
+    &[name=message] {
+        padding-bottom: 100px;
+    }
+    &[type=submit] {
+    margin: 30px 10px;
+    width: 250px;
+    padding: 10px;
+    background: #910665;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 30px;
+     &:hover {
+              background-color: lighten(#910665, 20%);
+     }           
+    }
+   }     
+#main{
+    width: 100%;
+    display: block;
+    margin: 0 10px;
+}
+}
+@media (max-width: 480px){
+     h5{
+        font-size: 18px;
+        padding: 10px 10px 0;
+        color: floralwhite;
+        line-height: 25px;
+        text-align: center;
+    }
+.about_text{
+    display: none;
+}
+    .about_flame{
+       width: 90%;
+       margin: 0 20px;
+       height: 530px;
+    }
+    .sp_about_text{
+        display: block;
+        width: 90%;
+        height: 520px;
+        margin: 10px 0 0 30px;
+        left: 10px;
+        
+        }
+    
+}
