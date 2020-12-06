@@ -15,6 +15,13 @@ ul:after {
   display: block;
   clear: both; }
 
+.kadou h5 {
+  background-color: #ec0da5;
+  font-size: 2rem;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 30px; }
+
 @media (min-width: 1161px) {
   header {
     display: -webkit-flex;
@@ -114,11 +121,12 @@ h4 {
 h5 {
   font-size: 20px;
   padding: 20px 20px 0;
-  color: floralwhite;
+  color: #ffffff;
   line-height: 25px; }
 
 #works h5 {
-  padding: 50px 20px 0; }
+  padding: 50px 20px 0;
+  text-align: left; }
 
 h6 {
   color: #fff;
@@ -134,11 +142,11 @@ a {
 
 a:link {
   /*アクセスしたことのないリンク*/
-  color: #0000FF; }
+  color: yellow; }
 
 a:visited {
   /*アクセスしたことのあるリンク*/
-  color: yellow; }
+  color: orange; }
 
 a:hover, a:active {
   /*マウスが上に乗っている状態*/
@@ -160,6 +168,9 @@ a:hover, a:active {
   z-index: 0;
   margin: 20px 0 0 160px;
   left: 180px; }
+
+.about_text {
+  background-color: #000000; }
 
 .about_flame {
   width: 55%;
@@ -211,24 +222,25 @@ a:hover, a:active {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
-  margin: 0 0 10px 300px; }
+  margin: 0 0 10px 150px; }
 
 .nyuuryoku, .kousei, .shiryou, .bunseki, .saito, .assistant {
-  max-width: 400px;
+  max-width: 350px;
   max-height: 400px;
   margin: 10px; }
 
 .nyuuryoku-img, .kousei-img, .shiryou-img, .bunseki-img, .saito-img, .assistant-img {
-  max-width: 400px;
+  max-width: 350px;
   height: 200px; }
   .nyuuryoku-img img, .kousei-img img, .shiryou-img img, .bunseki-img img, .saito-img img, .assistant-img img {
     width: 100%;
     max-height: 100%; }
 
 .nyuuryoku-text, .kousei-text, .shiryou-text, .bunseki-text, .saito-text, .assistant-text {
-  max-width: 400px;
+  max-width: 350px;
   height: 200px;
-  background-color: #910665; }
+  background-color: #910665;
+  text-align: left; }
 
 form {
   max-width: 700px;
@@ -251,8 +263,6 @@ input {
   border-radius: 10px;
   border-width: 1px;
   border-color: #ec0da5; }
-  input[name=message] {
-    padding-bottom: 100px; }
   input[type=submit] {
     margin: 30px 0 70px 90px;
     width: 250px;
@@ -266,12 +276,21 @@ input {
     input[type=submit]:hover {
       background-color: #f30aa9; }
 
+.item textarea {
+  margin: 10px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #ec0da5;
+  padding-bottom: 100px; }
+
 #menu {
   display: block;
   width: 20%; }
   #menu .menu_list li {
     text-align: right;
-    margin: 30px 50px 30px 0; }
+    margin: 20px 50px 30px 0; }
     #menu .menu_list li img {
       width: 100px;
       height: 100px; }
@@ -280,7 +299,7 @@ input {
   #menu .menu_list_fixed {
     position: sticky;
     margin-bottom: 0;
-    top: 30px; }
+    top: 20px; }
 
 #main {
   width: 80%;
@@ -351,11 +370,17 @@ small {
     header p {
       display: block;
       width: 100%;
-      font-size: 1.4em;
+      font-size: 1.2em;
       line-height: 20px;
       margin: 0;
       text-align: center;
       float: none; }
+
+  .kadou h5 {
+    background-color: #ec0da5;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 5px 0; }
 
   .owl-carousel owl-theme {
     display: none; }
@@ -409,13 +434,14 @@ small {
 
   h5 {
     font-size: 18px;
-    padding: 10px 10px 0;
-    color: floralwhite;
+    padding: 30px 10px 0;
+    color: #ffffff;
     line-height: 25px;
     text-align: center; }
 
   #works h5 {
-    padding: 50px 20px 0; }
+    padding: 50px 20px 0;
+    text-align: left; }
 
   h6 {
     color: #fff;
@@ -433,16 +459,17 @@ small {
     width: 100%;
     top: 0;
     background-color: #ffffff;
-    z-index: 10; }
+    z-index: 10;
+    margin: 10px 0 0 10px; }
     #menu ul {
       box-sizing: border-box; }
     #menu .menu_list li {
       text-align: right;
-      margin: 20px 30px 0px 0;
+      margin: 20px 10px 0px 0;
       display: block; }
       #menu .menu_list li img {
-        max-width: 100px;
-        max-height: 100px; }
+        max-width: 90px;
+        max-height: 90px; }
         #menu .menu_list li img:hover {
           opacity: 0.5; }
     #menu .menu_list_fixed {
@@ -460,7 +487,7 @@ small {
   .about_text {
     width: 90%;
     max-height: 100%;
-    margin: 10px 0 0 30px;
+    margin: 20px 0 0 30px;
     left: 10px; }
 
   .table_flex {
@@ -473,18 +500,18 @@ small {
     margin: 10px 0px; }
 
   .tu-ru_table, .sp_table {
-    margin: 0 10px;
-    width: 100%; }
+    margin: 0;
+    width: 95%; }
 
   .pc_table {
     display: none; }
 
   .sp_table {
     display: inline-table;
-    width: 100%; }
+    width: 95%; }
 
   #skills thead tr th, .sp_table thead tr th {
-    width: 100%;
+    width: 95%;
     height: 50px;
     font-size: 2rem;
     vertical-align: middle;
@@ -494,13 +521,13 @@ small {
     border-color: #7d7d7d;
     border-style: solid; }
 
-  #skills tbody, .sp_table thead tr th {
+  #skills tbody, .sp_table thead tr th, .tu-ru_table thead tr th {
     background-color: #f8eef7;
     color: #000000; }
-    #skills tbody tr td, .sp_table thead tr th tr td {
-      width: 100%;
+    #skills tbody tr td, .sp_table thead tr th tr td, .tu-ru_table thead tr th tr td {
+      width: 95%;
       height: 50px;
-      font-size: 2rem;
+      font-size: 1.6rem;
       vertical-align: middle;
       text-align: center;
       border-width: 1px;
@@ -525,8 +552,6 @@ small {
     border-radius: 10px;
     border-width: 1px;
     border-color: #ec0da5; }
-    input[name=message] {
-      padding-bottom: 100px; }
     input[type=submit] {
       margin: 30px 10px;
       width: 250px;
@@ -540,15 +565,31 @@ small {
       input[type=submit]:hover {
         background-color: #f30aa9; }
 
+  .item textarea {
+    margin: 10px;
+    max-width: 270px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #ec0da5;
+    padding-bottom: 100px; }
+
   #main {
     width: 100%;
     display: block;
     margin: 0 10px; } }
+.thanks h4 {
+  margin: 0;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 30px; }
+
 @media (max-width: 480px) {
   h5 {
     font-size: 18px;
     padding: 10px 10px 0;
-    color: floralwhite;
+    color: #ffffff;
     line-height: 25px;
     text-align: center; }
 
@@ -557,14 +598,33 @@ small {
 
   .about_flame {
     width: 90%;
-    margin: 0 20px;
+    margin: 0 10px;
     height: 530px; }
 
   .sp_about_text {
     display: block;
     width: 90%;
     height: 520px;
-    margin: 10px 0 0 30px;
-    left: 10px; } }
+    margin: 10px 0 0 20px;
+    left: 10px; }
+
+  #menu {
+    display: block;
+    width: 100%; }
+    #menu .menu_list_fixed {
+      display: flex;
+      justify-content: space-around;
+      height: 80px;
+      background-color: #ffffff;
+      width: 100%;
+      margin: 0; }
+    #menu .menu_list li {
+      text-align: center;
+      height: 80px; }
+      #menu .menu_list li img {
+        width: 50px;
+        height: 50px; }
+        #menu .menu_list li img:hover {
+          opacity: 0.5; } }
 
 /*# sourceMappingURL=style.css.map */

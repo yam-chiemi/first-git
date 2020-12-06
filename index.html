@@ -6,9 +6,11 @@
   -------------------------------------------------- -->
   <meta charset="utf-8">
   <title>float&width</title>
-  <meta name="description" content="鳥取在住、フリーランスで仕事をしているyamachiのHPです。">
-  <meta name="keywords" content="Web, デザイン, デザイナー, ポートフォリオ, Web制作, データ入力, excel, エクセル, word, ワード, ppt, パワーポイント">
+  <meta name="description" content="鳥取在住フリーランス yamachiのHPです。">
+  <meta name="keywords" content="Web, デザイン, デザイナー, ポートフォリオ, Web制作, データ入力, excel, エクセル, word, ワード, ppt, パワーポイント, 鳥取, yamachi, 山田千絵美, float&width">
   <meta name="author" content="Chiemi Yamada">
+  <meta name="robots">
+  <meta name="googlebot"> 
 
   <!-- Mobile Specific Metas
   -------------------------------------------------- -->
@@ -20,11 +22,11 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- Favicon
   -------------------------------------------------- -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/icon.png">
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -42,9 +44,10 @@
     <div id="header">
         <h1>float＆width</h1>
         <p>ご来訪ありがとうございます。<br>
-        鳥取在住のフリーランス yamachiのHPです。</p>
+        鳥取在住のフリーランス yamachiのHTML版HPです。</p>
     </div>
- </header>
+    </header>
+    
  <div id="cover" class="container">
     <div class="owl-carousel owl-theme">
        <div class="banner1">
@@ -65,10 +68,13 @@
             <img src="images/cover4.jpg" alt= "banner04">
         </div>
      </div>
+     <div class="kadou">
+        <h5>現在の稼働状況：2021年1月からの稼働業務を受付中</h5>
+    </div>
      <div class="main_menu">
       <div id="menu">
           <ul class="menu_list menu_list_fixed">
-              <li><a href="#"><img src="./images/menu1.png" alt="top"></a></li>
+              <li><a href="http://www.yama-chi.sakura.ne.jp/wd/"><img src="./images/menu1.png" alt="top"></a></li>
               <li><a href="#about"><img src="./images/menu2.png" alt="about"></a></li>
               <li><a href="#skills"><img src="./images/menu3.png" alt="skills"></a></li>
               <li><a href="#works"><img src="./images/menu4.png" alt="works"></a></li>
@@ -85,17 +91,17 @@
               資料作成等をしています。<br>
               詳細は<a href="#works">Works</a>をご覧ください。<br>
               <br>
-              コロナの影響を受けての業務減少を機に、<br>
-              オンラインスクールの<a href="https://techacademy.jp/webdesign-wordpress-set">【Teck Academy】</a>で<br>
+              オンラインスクールの<a href="https://techacademy.jp/webdesign-wordpress-set" target="_blank">【Teck Academy】</a>で<br>
               WEBデザインとWordPressを学び、<br>
               このHPを作りました。レスポンシブ対応です。<br>
               <br>
               今後はサイト制作等のお仕事にも携わりたいです。<br>
               ワイヤーフレームからコーディング、<br>
-              WordPressではPHPも学びました。<br>
-              WordPress版HPは<a href="#">コチラ</a>をご覧ください。<br>
+              Compass、Skeleton、jQuery等学びました。<br>
+              WordPress版HPは<a href="http://www.yama-chi.sakura.ne.jp/" target="_blank">コチラ</a>をご覧ください。<br>
               <br>
               平日4～5時間程度、繁忙時は更に稼働可能です。<br>
+              ハイブリッド主婦を目指しています。<br>
               <a href="#contact">Contact</a>よりご連絡ください。
               </h5>
           </div>
@@ -106,7 +112,6 @@
               Excel･Word･PPTを使った<br>
               資料作成等をしています。<br>
               <br>
-              コロナの影響を受け、<br>
               <a href="https://techacademy.jp/webdesign-wordpress-set">【Teck Academy】</a>で<br>
               WEBデザインとWordPress<br>
               を学び、このHPを作りました。<br>
@@ -278,8 +283,8 @@
             <div class="item">
                 <input type="text" placeholder="NAME" name="name" required>
                 <input type="text" placeholder="COMPANY" name="company">
-                <input type="email" placeholder="Email" name="email" required>
-                <input type="text" placeholder="Message" name="message" required>
+                <input type="email" placeholder="EMAIL" name="email" required>
+                <textarea  placeholder="MESSAGE" name="content" rows="5" cols="200" wrap="hard"></textarea>
                 <input type="submit" value="Send">
             </div>
             </form>
